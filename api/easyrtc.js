@@ -29,6 +29,7 @@ if (navigator.mozGetUserMedia) {
     // Get UserMedia (only difference is the prefix).
     // Code from Adam Barth.
     window.getUserMedia = navigator.mozGetUserMedia.bind(navigator);
+    getUserMedia = window.getUserMedia;
     // Creates iceServer from the url for FF.
     window.createIceServer = function(url, username, password) {
         var iceServer = null;
@@ -103,6 +104,7 @@ if (navigator.mozGetUserMedia) {
     // Get UserMedia (only difference is the prefix).
     // Code from Adam Barth.
     window.getUserMedia = navigator.webkitGetUserMedia.bind(navigator);
+    getUserMedia = window.getUserMedia;
     // Attach a media stream to an element.
     attachMediaStream = function(element, stream) {
         if (typeof element.srcObject !== 'undefined') {
